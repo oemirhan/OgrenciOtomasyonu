@@ -11,7 +11,6 @@ namespace OgrenciOtomasyonu
         public ogrenciformu(string i, string n)
         {
             InitializeComponent();
-
             ognnumara = n;
             hosglabel.Text = i;
             numlabel.Text = n;
@@ -21,35 +20,6 @@ namespace OgrenciOtomasyonu
         string ognnumara, n1, n2, n3, p1, o1, dt;
         bool d1;
         Color back, fore = new Color();
-
-        private void cikis_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void hmakinesi_Click(object sender, EventArgs e)
-        {
-            Process.Start("calc.exe");
-        }
-
-        private void duyurular_Click(object sender, EventArgs e)
-        {
-            Hide();
-            duyurulistele duyurulistele = new duyurulistele();
-            duyurulistele.Show();
-        }
-
-        private void mesajlar_Click(object sender, EventArgs e)
-        {
-            Hide();
-            mesajlar mesajlar = new mesajlar(ognnumara);
-            mesajlar.Show();
-        }
-
-        private void ogrenciformu_Load(object sender, EventArgs e)
-        {
-            notlariyukle();
-        }
 
         void notlariyukle()
         {
@@ -116,6 +86,35 @@ namespace OgrenciOtomasyonu
                     Application.Exit();
                 }
             }
+        }
+
+        private void cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void hmakinesi_Click(object sender, EventArgs e)
+        {
+            Process.Start("calc.exe");
+        }
+
+        private void duyurular_Click(object sender, EventArgs e)
+        {
+            Hide();
+            duyurulistele duyurulistele = new duyurulistele();
+            duyurulistele.Show();
+        }
+
+        private void mesajlar_Click(object sender, EventArgs e)
+        {
+            Hide();
+            mesajlar mesajlar = new mesajlar(ognnumara);
+            mesajlar.Show();
+        }
+
+        private void ogrenciformu_Load(object sender, EventArgs e)
+        {
+            notlariyukle();
         }
     }
 }
