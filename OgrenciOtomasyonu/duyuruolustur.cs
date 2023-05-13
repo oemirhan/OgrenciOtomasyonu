@@ -14,21 +14,6 @@ namespace OgrenciOtomasyonu
 
         static string baglantit = "Data Source=EMIRHAN\\SERVEREMIRHAN; Initial Catalog=OgrenciNotKayıt; Integrated Security=True";
 
-        private void cikis_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void duyuruolustur_Load(object sender, EventArgs e)
-        {
-            listel();
-        }
-
-        private void listele_Click(object sender, EventArgs e)
-        {
-            listel();
-        }
-
         public void listel()
         {
             using (SqlConnection baglanti = new SqlConnection(baglantit))
@@ -118,6 +103,21 @@ namespace OgrenciOtomasyonu
                 MessageBox.Show("Düzenleme başarıyla tamamlandı.", "Düzenleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listel();
             }
+        }
+
+        private void duyuruolustur_Load(object sender, EventArgs e)
+        {
+            listel();
+        }
+
+        private void listele_Click(object sender, EventArgs e)
+        {
+            listel();
+        }
+
+        private void cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
