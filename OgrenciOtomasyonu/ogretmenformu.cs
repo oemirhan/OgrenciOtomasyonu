@@ -10,7 +10,6 @@ namespace OgrenciOtomasyonu
         public ogretmenformu(string i, string n)
         {
             InitializeComponent();
-
             ogtnumara = n;
             hosglabel.Text = i;
             numlabel.Text = n;
@@ -41,13 +40,6 @@ namespace OgrenciOtomasyonu
                 dataGridView2.DataSource = dt;
                 dataGridView2.AutoResizeColumns();
             }
-        }
-
-        private void ogretmenformu_Load(object sender, EventArgs e)
-        {
-            listel();
-            dataGridView1.Width = ClientSize.Width;
-            dataGridView2.Width = ClientSize.Width;
         }
 
         private void kaydet_Click(object sender, EventArgs e)
@@ -90,6 +82,13 @@ namespace OgrenciOtomasyonu
                 sinav3.Clear();
                 proje.Clear();
             }
+        }
+
+        private void ogretmenformu_Load(object sender, EventArgs e)
+        {
+            listel();
+            dataGridView1.Width = ClientSize.Width;
+            dataGridView2.Width = ClientSize.Width;
         }
 
         private void cikis_Click(object sender, EventArgs e)
