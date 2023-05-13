@@ -9,12 +9,42 @@ namespace OgrenciOtomasyonu
     {
         public mesajlar(string n)
         {
-            numara = n;
             InitializeComponent();
+            numara = n;
         }
 
-        string numara;
         static string baglantit = "Data Source=EMIRHAN\\SERVEREMIRHAN; Initial Catalog=OgrenciNotKayıt; Integrated Security=True";
+        string numara;
+
+        void gelenmesajlar()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantit))
+            {
+                SqlCommand cmda = new SqlCommand("select * from Tbl_Mesajlar where Alici=@p1", baglanti);
+                cmda.Parameters.AddWithValue("@p1", numara);
+
+                SqlDataAdapter dab = new SqlDataAdapter(cmda);
+                DataTable dtb = new DataTable();
+                dab.Fill(dtb);
+                dataGridView1.DataSource = dtb;
+                dataGridView1.AutoResizeColumns();
+            }
+        }
+
+        void gidenmesajlar()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantit))
+            {
+                SqlCommand cmda = new SqlCommand("select * from Tbl_Mesajlar where Gonderen=@p1", baglanti);
+                cmda.Parameters.AddWithValue("@p1", numara);
+
+                SqlDataAdapter dab = new SqlDataAdapter(cmda);
+                DataTable dtb = new DataTable();
+                dab.Fill(dtb);
+                dataGridView2.DataSource = dtb;
+                dataGridView2.AutoResizeColumns();
+            }
+        }
 
         private void gönderbuton_Click(object sender, EventArgs e)
         {
@@ -51,36 +81,6 @@ namespace OgrenciOtomasyonu
             dataGridView2.Width = ClientSize.Width;
             gelenmesajlar();
             gidenmesajlar();
-        }
-
-        void gelenmesajlar()
-        {
-            using (SqlConnection baglanti = new SqlConnection(baglantit))
-            {
-                SqlCommand cmda = new SqlCommand("select * from Tbl_Mesajlar where Alici=@p1", baglanti);
-                cmda.Parameters.AddWithValue("@p1", numara);
-
-                SqlDataAdapter dab = new SqlDataAdapter(cmda);
-                DataTable dtb = new DataTable();
-                dab.Fill(dtb);
-                dataGridView1.DataSource = dtb;
-                dataGridView1.AutoResizeColumns();
-            }
-        }
-
-        void gidenmesajlar()
-        {
-            using (SqlConnection baglanti = new SqlConnection(baglantit))
-            {
-                SqlCommand cmda = new SqlCommand("select * from Tbl_Mesajlar where Gonderen=@p1", baglanti);
-                cmda.Parameters.AddWithValue("@p1", numara);
-
-                SqlDataAdapter dab = new SqlDataAdapter(cmda);
-                DataTable dtb = new DataTable();
-                dab.Fill(dtb);
-                dataGridView2.DataSource = dtb;
-                dataGridView2.AutoResizeColumns();
-            }
         }
     }
 }
