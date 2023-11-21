@@ -279,7 +279,7 @@
             // 
             // listele
             // 
-            this.listele.Location = new System.Drawing.Point(58, 445);
+            this.listele.Location = new System.Drawing.Point(57, 420);
             this.listele.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listele.Name = "listele";
             this.listele.Size = new System.Drawing.Size(203, 52);
@@ -290,7 +290,7 @@
             // 
             // guncelle
             // 
-            this.guncelle.Location = new System.Drawing.Point(58, 383);
+            this.guncelle.Location = new System.Drawing.Point(57, 358);
             this.guncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guncelle.Name = "guncelle";
             this.guncelle.Size = new System.Drawing.Size(203, 52);
@@ -301,7 +301,7 @@
             // 
             // sil
             // 
-            this.sil.Location = new System.Drawing.Point(58, 321);
+            this.sil.Location = new System.Drawing.Point(57, 296);
             this.sil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sil.Name = "sil";
             this.sil.Size = new System.Drawing.Size(203, 52);
@@ -312,7 +312,7 @@
             // 
             // kaydet
             // 
-            this.kaydet.Location = new System.Drawing.Point(58, 259);
+            this.kaydet.Location = new System.Drawing.Point(57, 234);
             this.kaydet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kaydet.Name = "kaydet";
             this.kaydet.Size = new System.Drawing.Size(203, 52);
@@ -341,7 +341,7 @@
             this.panel4.Location = new System.Drawing.Point(18, 137);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(308, 566);
+            this.panel4.Size = new System.Drawing.Size(308, 491);
             this.panel4.TabIndex = 26;
             // 
             // idt
@@ -548,7 +548,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(1446, 785);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("OgrenciOtomasyonu")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Emirhan Ömeroğlu")]
 [assembly: AssemblyProduct("OgrenciOtomasyonu")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright © 2023 Emirhan Ömeroğlu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
